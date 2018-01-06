@@ -1,0 +1,34 @@
+{
+  "name": "center-kadastr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.20.0",
+    "g": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "jstransformer-markdown-it": "^2.0.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gold6711/Avitek-new.git"
+  },
+  "author": "Osipenko Igor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gold6711/Avitek-new/issues"
+  },
+  "homepage": "https://github.com/gold6711/Avitek-new#readme"
+}
