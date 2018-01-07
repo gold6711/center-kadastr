@@ -1,34 +1,14 @@
 menu
-.container
-    nav
-        .hide-nav
-            span.hide-nav__line.hide-nav__line--top
-            span.hide-nav__line.hide-nav__line--middle
-            span.hide-nav__line.hide-nav__line--bottom
-        ul.nav_list
-            li
-                a(href='#') Главная
-            =', '
-            li
-                a(href='#') Каталог
-            =', '
-            li
-                a(href='#') О компании
-            =', '
-            li
-                a(href='#') Контакты
-            =', '
-            li
-                a(href='#') Мероприятия
-            =', '
-            li
-                a(href='#') Портфолио
-            =', '
-            li
-                a(href='#') Дирекция
-            =', '
-
-
-
-
-
+    mixin list(...items)
+        .container
+            nav
+                .hide-nav
+                    span.hide-nav__line.hide-nav__line--top
+                    span.hide-nav__line.hide-nav__line--middle
+                    span.hide-nav__line.hide-nav__line--bottom
+                ul.nav_list
+                    each item in items
+                        li
+                            a(href="javascript:void(0);")= item
+    +list('О зоопарке','Животные','Мероприятия','Цены на билеты','Фото и видео','Отзывы','Правила посещения','Новости','Контакты','Вакансии')
+                //=', '
