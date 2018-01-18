@@ -1,14 +1,27 @@
+-var space =', '
 menu
-    mixin list(...items)
-        .container
-            nav
-                .hide-nav
-                    span.hide-nav__line.hide-nav__line--top
-                    span.hide-nav__line.hide-nav__line--middle
-                    span.hide-nav__line.hide-nav__line--bottom
-                ul.nav_list
-                    each item in items
-                        li
-                            a(href="javascript:void(0);")= item
-    +list('О зоопарке','Животные','Мероприятия','Цены на билеты','Фото и видео','Отзывы','Правила посещения','Новости','Контакты','Вакансии')
-
+    nav
+        .hide-nav
+            span.hide-nav__line.hide-nav__line--top
+            span.hide-nav__line.hide-nav__line--middle
+            span.hide-nav__line.hide-nav__line--bottom
+    .top-menu-line
+        ul.nav_list
+            li.menu-item
+                a(href='#') О компании
+            =space
+            li.menu-item
+                a(href='#') Услуги
+            =space
+            li.menu-item
+                a(href='#') Клиентам
+            =space
+            li.menu-item
+                a(href='#') Отзывы
+            =space
+            li.menu-item
+                a(href='#') Новости
+            =space
+            li.menu-item
+                a(href='#') Контакты
+            =space

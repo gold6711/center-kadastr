@@ -16,10 +16,11 @@ html(lang="ru-RU")
 
     body(class="" + bodyClass)
     .wrapper_all
-    .wrapper
-        include ../common/header
-            block content
-            include ../common/footer
+        .wrapper
+            include ../common/header
+        include ../common/menu
+        block content
+        include ../common/footer
 
         script(src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
