@@ -4,9 +4,13 @@ menu
         .hide-nav
             span.hide-nav__line.hide-nav__line--top
             span.hide-nav__line.hide-nav__line--middle
-            span.hide-nav__line.hide-nav__line--bottom
+            span.hide-nav__line.hide-nav__l
     .top-menu-line
-        ul.nav_list
+        ul.nav_list.wrapper
+            li.menu-item
+                a.home(href='/')
+                    img(src="img/home.png" style="width: 20px" alt="")
+            =space
             li.menu-item
                 a(href='#') О компании
             =space

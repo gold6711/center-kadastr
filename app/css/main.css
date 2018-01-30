@@ -13,7 +13,7 @@ a {
   text-decoration: none; }
 
 body {
-  font-family: 'Myriad Pro Regular', serif;
+  font-family: Myriad Pro Regular, serif;
   font-weight: 400;
   color: #333; }
 
@@ -42,6 +42,7 @@ header .top_line {
   display: block;
   width: 105px;
   height: 100px;
+  font-family: Myriad Pro Regular, serif;
   color: #34495e;
   font-size: 30px;
   font-weight: 500;
@@ -50,11 +51,13 @@ header .top_line {
   text-transform: uppercase; }
 
 .title_logo {
-  margin-top: -4px; }
+  margin-top: -4px;
+  font-weight: 300; }
 
 .text_logo_color {
   line-height: 29px;
-  color: #f39c12; }
+  color: #f39c12;
+  font-weight: 500; }
 
 .top_contacts {
   float: left;
@@ -88,7 +91,7 @@ header .top_line {
   text-decoration: underline; }
 
 .top_address {
-  width: 250px;
+  width: 258px;
   height: 80px;
   float: left;
   margin-left: 50px; }
@@ -234,26 +237,10 @@ li {
     font-weight: 600;
     text-transform: uppercase; }
 
-/*{@import "http://fonts.fontstorage.com/import/sourcesanspro.css";
- *font-family: 'Source Sans Pro';} */
 /***************** MENU  *******************/
 .top-menu-line {
-  background-color: #34495e;
-  min-width: 1550px;
-  margin: 0 auto;
-  overflow: hidden; }
-
-.menu-item a {
-  display: inline-block;
-  text-transform: uppercase;
-  color: #fff;
-  vertical-align: middle;
-  padding-right: 40px; }
-
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto; }
+  position: relative;
+  background-color: #34495e; }
 
 nav {
   position: relative; }
@@ -262,10 +249,7 @@ nav {
   background-color: #34495e;
   line-height: 0;
   font-size: 0;
-  padding: 5px 15px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto; }
+  padding: 5px 15px; }
   .nav_list:after {
     content: '';
     visibility: hidden;
@@ -274,7 +258,7 @@ nav {
     display: inline-block;
     height: 0; }
   .nav_list li {
-    padding: 10px 30px;
+    padding: 0 30px;
     display: inline-block;
     vertical-align: top;
     list-style-type: disc;
@@ -290,6 +274,25 @@ nav {
       text-decoration: underline;
       background-color: #3297db; }
 
+.menu-item a {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  vertical-align: middle;
+  padding-right: 30px; }
+
+.menu-item a.home {
+  position: absolute;
+  top: 0;
+  background: #526476;
+  width: 50px;
+  height: 50px; }
+  .menu-item a.home img {
+    position: relative;
+    top: 7px;
+    left: 6px; }
+
+/************ nav panel ****************/
 .hide-nav {
   display: none;
   position: relative;
@@ -340,7 +343,7 @@ nav {
   .nav_list {
     position: absolute;
     left: -500px;
-    width: 200px;
+    width: 250px;
     transition: 1s; }
     .nav_list.show {
       left: 0;
