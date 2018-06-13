@@ -1,31 +1,84 @@
--var space =', '
 menu
     nav
         .hide-nav
             span.hide-nav__line.hide-nav__line--top
             span.hide-nav__line.hide-nav__line--middle
             span.hide-nav__line.hide-nav__line--bottom
-    .top-menu-line
-        ul.nav_list.wrapper
-            li.menu-item
-                a.home(href='/')
-                    img(src="img/home.png" style="width: 20px" alt="")
-            =space
-            li.menu-item.submenu
-                a(href='#') О компании
-            =space
-            li.menu-item.submenu
-                a(href='#') Услуги
-            =space
-            li.menu-item.submenu
-                a(href='#') Клиентам
-            =space
-            li.menu-item
-                a(href='#') Отзывы
-            =space
-            li.menu-item
-                a(href='#') Новости
-            =space
-            li.menu-item
-                a(href='#') Контакты
-            =space
+        .wrapper
+            ul.menu-line
+                li.menu-item-home
+                    a(href='#')
+                        img(src='img/home.png', alt='Позвонить')
+                li.menu-item.sub-menu
+                    a(href='#')
+                        | О компании
+                        i.fa.fa-angle-down
+                    ul
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                li.menu-item.sub-menu
+                    a(href='#')
+                        | Услуги
+                        i.fa.fa-angle-down
+                    ul
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                li.menu-item.sub-menu
+                    a(href='#')
+                        | Клиентам
+                        i.fa.fa-angle-down
+                    ul
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                li.menu-item.sub-menu
+                    a(href='#')
+                        | Отзывы
+                        i.fa.fa-angle-down
+                    ul
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                li.menu-item.sub-menu
+                    a(href='#')
+                        | Новости
+                        i.fa.fa-angle-down
+                    ul
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                        li
+                            a(href='#')
+                                | Product Item
+                li.menu-item
+                    a(href='#')
+                        | Контакты

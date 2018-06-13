@@ -237,71 +237,6 @@ li {
     font-weight: 600;
     text-transform: uppercase; }
 
-/***************** MENU  *******************/
-.top-menu-line {
-  position: relative;
-  background-color: #34495e; }
-
-nav {
-  position: relative; }
-
-.nav_list {
-  background-color: #34495e;
-  line-height: 0;
-  font-size: 0;
-  padding: 5px 15px; }
-  .nav_list:after {
-    content: '';
-    visibility: hidden;
-    overflow: hidden;
-    width: 100%;
-    display: inline-block;
-    height: 0; }
-  .nav_list li {
-    padding: 0 30px;
-    display: inline-block;
-    vertical-align: top;
-    list-style-type: disc;
-    font-size: 14px;
-    line-height: normal; }
-  .nav_list a {
-    display: block;
-    line-height: 40px;
-    padding: 0 10px;
-    text-decoration: none;
-    color: #fff; }
-    .nav_list a:hover {
-      text-decoration: underline;
-      background-color: #3297db; }
-
-.menu-item a {
-  display: inline-block;
-  text-transform: uppercase;
-  color: #fff;
-  vertical-align: middle;
-  padding-right: 30px; }
-
-.menu-item a.home {
-  position: absolute;
-  top: 0;
-  background: #526476;
-  width: 50px;
-  height: 50px; }
-  .menu-item a.home img {
-    position: relative;
-    top: 7px;
-    left: 6px; }
-
-.submenu:after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 18px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  transform: rotate(-45deg); }
-
 /************ nav panel ****************/
 .hide-nav {
   display: none;
@@ -367,61 +302,72 @@ nav {
   height: 200px;
   background-color: #CCCCCC; }
 
-/*********************************************/
+/***************** MENU  **********************/
+.menu-item-home a {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  vertical-align: middle;
+  padding-right: 30px; }
+  .menu-item-home a img {
+    position: relative;
+    left: 4px; }
+
 nav {
   position: absolute;
   width: 100%;
   min-width: 1200px;
-  top: 50%;
   background-color: #34495e; }
   nav ul {
     background: #34495e;
     list-style: none;
     margin: 0;
     padding: 0; }
-    nav ul li {
+  nav .menu-line {
+    padding-left: 27px; }
+    nav .menu-line li {
       position: relative;
       display: inline-block;
-      margin-right: -4px;
-      text-align: center; }
-      nav ul li:first-child a {
-        background: #34495e;
-        width: 49px;
-        padding: 15px 0; }
-      nav ul li:last-child {
+      margin-right: -1px;
+      text-align: center;
+      vertical-align: middle; }
+      nav .menu-line li:first-child a {
+        background: #526476;
+        padding-left: 12px; }
+      nav .menu-line li:last-child {
         margin: 0; }
-      nav ul li a {
+      nav .menu-line li a {
         display: block;
-        background: #34495e;
-        padding: 15px 20px;
+        padding: 13px 20px;
         color: #fff;
         font-size: 14px;
         text-decoration: none;
         transition: 0.2s linear; }
-        nav ul li a:hover {
-          background: #37bc9b; }
-      nav ul li ul {
+        nav .menu-line li a:hover {
+          background: #37bc9b;
+          top: -4px; }
+      nav .menu-line li ul {
         position: absolute;
         top: 100%;
         left: 0;
-        width: 240px;
+        width: 165px;
         border-bottom: 4px solid #48cfad; }
-        nav ul li ul li {
+        nav .menu-line li ul li {
           display: block;
           width: 100%;
           margin: 0;
           text-align: left; }
-          nav ul li ul li a {
+          nav .menu-line li ul li a {
             display: block;
             background: #3a3a3a;
             padding: 10px 15px; }
-            nav ul li ul li a:first-child {
+            nav .menu-line li ul li a:first-child {
               background: #3a3a3a;
               width: auto;
               border-left: 4px solid transparent;
               padding: 10px 15px;
               font-size: 14px; }
-            nav ul li ul li a:hover {
+            nav .menu-line li ul li a:hover {
               background: #333;
               border-left: 4px solid #48cfad; }
 

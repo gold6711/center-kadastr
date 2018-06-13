@@ -5,7 +5,13 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglifyjs'),
     cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
+    webfont = require('gulp-webfont'),
     browserSync = require('browser-sync');
+
+var webfont_config = {
+    types:'eot,woff2,woff,ttf,svg',
+    ligatures: true
+};
 
 gulp.task('sass', function(){ // Создаем таск "sass"
     return gulp.src('app/sass/**/*.sass') //все sass из sass и доч
@@ -38,6 +44,17 @@ gulp.task('css-libs',['sass'], function() {
     .pipe(gulp.dest('app/css'));
 });
 
+gulp.task('font-aw', function(){
+    return gulp.src('node_modules/font-awesome/**.*')
+    .pipe(gulp.dest('app/libs/font-awesome/'));
+});
+
+gulp.task('default', function () {
+    return gulp.src('test/*.svg')
+        .pipe(webfont(webfont_config))
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browser Sync
         server: { // Определяем параметры сервера
@@ -47,7 +64,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
     });
 });
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'pug', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'css-libs', 'pug', 'font-aw', 'scripts'], function() {
     gulp.watch('app/pug/**/*.pug', ['pug']);
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);

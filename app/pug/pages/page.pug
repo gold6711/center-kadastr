@@ -1,0 +1,61 @@
+//extends ../layout/layout.pug
+
+block content
+nav.navbar.navbar-default(role='navigation')
+    .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='#') Brand
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li.active
+                    a(href='#') Ссылка
+                li
+                    a(href='#') Ссылка
+                li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        | Dropdown
+                        b.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='#') Действие
+                        li
+                            a(href='#') Другое действие
+                        li
+                            a(href='#') Что-то еще
+                        li.divider
+                        li
+                            a(href='#') Отдельная ссылка
+                        li.divider
+                        li
+                            a(href='#') Еще одна отдельная ссылка
+            form.navbar-form.navbar-left(role='search')
+                .form-group
+                    input.form-control(type='text', placeholder='Search')
+                button.btn.btn-default(type='submit') Отправить
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='#') Ссылка
+                li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        | Dropdown
+                        b.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='#') Действие
+                        li
+                            a(href='#') Другое действие
+                        li
+                            a(href='#') Что-то еще
+                        li.divider
+                        li
+                            a(href='#') Отдельная ссылка
+        // /.navbar-collapse
+    // /.container-fluid
+

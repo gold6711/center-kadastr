@@ -239,88 +239,6 @@ li
     text-transform: uppercase
 
 
-/***************** MENU  *******************/
-
-.top-menu-line
-  position: relative
-  background-color: #34495e
-  //min-width: 1550px //1470
-  //margin: 0 auto
-  //overflow: hidden
-
-
-//.container
-//  width: 100%
-//  max-width: 1000px
-//  margin: 0 auto
-
-nav
-  position: relative
-
-.nav_list
-  background-color: #34495e
-  line-height: 0
-  font-size: 0
-  padding: 5px 15px
-  //width: 100%
-  //max-width: 1200px
-  //margin: 0 auto // добавил auto к 0
-  &:after
-    content: ''
-    visibility: hidden
-    overflow: hidden
-    width: 100%
-    display: inline-block
-    height: 0
-  li
-    padding: 0 30px
-    display: inline-block
-    vertical-align: top
-    list-style-type: disc
-    font-size: 14px
-    line-height: normal
-  a
-    display: block
-    line-height: 40px
-    padding: 0 10px
-    text-decoration: none
-    color: #fff
-    &:hover
-      text-decoration: underline
-      background-color: #3297db
-
-.menu-item
-  //position: relative
-  a
-    display: inline-block
-    text-transform: uppercase
-    color: #fff
-    vertical-align: middle
-    padding-right: 30px
-  a.home
-    position: absolute
-    top: 0
-    background: #526476
-    width: 50px
-    height: 50px
-    img
-      position: relative
-      top: 7px
-      left: 6px
-
-
-.submenu
-  &:after
-    content: ''
-    width: 5px
-    height: 5px
-    position: absolute
-    top: 18px
-    border-left: 1px solid #fff
-    border-bottom: 1px solid #fff
-    transform: rotate(-45deg)
-
-
 /************ nav panel ****************/
 
 
@@ -388,7 +306,19 @@ nav
   height: 200px
   background-color: #CCCCCC
 
-/*********************************************/
+
+/***************** MENU  **********************/
+
+.menu-item-home
+  a
+    display: inline-block
+    text-transform: uppercase
+    color: #fff
+    vertical-align: middle
+    padding-right: 30px
+    img
+      position: relative
+      left: 4px
 
 
 
@@ -396,41 +326,42 @@ nav
   position: absolute
   width: 100%
   min-width: 1200px
-  top: 50%
   background-color: #34495e
-  //left: 50%
-  //margin: -23px 0 0 -240px
   ul
     background: #34495e
     list-style: none
     margin: 0
     padding: 0
+  .menu-line
+    padding-left: 27px
     li
       position: relative
       display: inline-block
-      margin-right: -4px
+      margin-right: -1px // расст между пункт меню
+      //margin-top: -8px //dobavleno
       text-align: center
+      vertical-align: middle
       &:first-child a
-        background: #34495e
-        width: 49px
-        padding: 15px 0
+        background: #526476
+        padding-left: 12px
       &:last-child
         margin: 0
       a
         display: block
-        background: #34495e
-        padding: 15px 20px
+        //background: #34495e
+        padding: 13px 20px
         color: #fff
         font-size: 14px
         text-decoration: none
         transition: 0.2s linear
         &:hover
           background: #37bc9b
+          top: -4px
       ul
         position: absolute
         top: 100%
         left: 0
-        width: 240px
+        width: 165px // ширина выпад списка 240px
         border-bottom: 4px solid #48cfad
         li
           display: block
@@ -450,5 +381,6 @@ nav
             &:hover
               background: #333
               border-left: 4px solid #48cfad
+
 .fa-angle-down, .fa-angle-up
   padding-left: 12px
